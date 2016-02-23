@@ -1,0 +1,22 @@
+{
+	"versions": {
+		"imageformats": "5.2.0",
+		"colorize": "1.0.5",
+		"derelict-fi": "2.0.2",
+		"gtk-d": "3.2.2",
+		"moggle": "0.0.1",
+		"derelict-gl3": "1.0.18",
+		"ae-graphics": "0.0.9",
+		"derelict-il": "1.0.0",
+		"derelict-sdl2": "1.9.7",
+		"descore": "1.2.7",
+		"derelict-glfw3": "1.1.1",
+		"derelict-util": "2.0.4",
+		"derelict-ft": "1.0.2",
+		"derelict-assimp3": "1.0.1",
+		"gfm": "5.0.0",
+		"des": "1.4.1",
+		"dgame": "0.6.3"
+	},
+	"fileVersion": 1
+}

@@ -1,0 +1,5 @@
+name "fishbowl"
+description "A minimal D application."
+copyright "Copyright © 2016, Quinn"
+authors "Quinn"
+dependency "dgame" version="~>0.6.3"
