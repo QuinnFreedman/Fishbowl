@@ -1,0 +1,1020 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"bakeScent"
+			],
+			[
+				"y",
+				"_y"
+			],
+			[
+				"M",
+				"MAX_POPULATION"
+			],
+			[
+				"MA",
+				"MAX_SPEED"
+			],
+			[
+				"h",
+				"homeostasis"
+			],
+			[
+				"to",
+				"topology"
+			],
+			[
+				"debug",
+				"debugNetwork"
+			],
+			[
+				"Ve",
+				"Vector2i"
+			],
+			[
+				"W",
+				"WINDOW_WIDTH"
+			],
+			[
+				"get",
+				"getNeuronPosition"
+			],
+			[
+				"MAX",
+				"MAX_ROT_SPEED"
+			],
+			[
+				"MIN",
+				"MAX_ACCELERATION"
+			],
+			[
+				"Sc",
+				"SCENT_RADIUS"
+			],
+			[
+				"num",
+				"numSurviving"
+			],
+			[
+				"mean",
+				"meanSurvivorship"
+			],
+			[
+				"sur",
+				"survivors"
+			],
+			[
+				"cr",
+				"cross"
+			],
+			[
+				"fish",
+				"fishes"
+			],
+			[
+				"cross",
+				"crossOver"
+			],
+			[
+				"chil",
+				"childWeights"
+			],
+			[
+				"ch",
+				"childWeights"
+			],
+			[
+				"a",
+				"a_weights"
+			],
+			[
+				"ge",
+				"generateGaussianNoise"
+			],
+			[
+				"wr",
+				"writeln"
+			],
+			[
+				"av",
+				"avgNumChildren"
+			],
+			[
+				"sr",
+				"suirvivingIndex"
+			],
+			[
+				"in",
+				"initWeights"
+			],
+			[
+				"se",
+				"selectedFish"
+			],
+			[
+				"S",
+				"SIDEBAR_WIDTH"
+			],
+			[
+				"F",
+				"Fish"
+			],
+			[
+				"set",
+				"setPosition"
+			],
+			[
+				"Pos",
+				"posLerp"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"s",
+				"shapeMax"
+			],
+			[
+				"D",
+				"DEBUG_WIDTH"
+			],
+			[
+				"n",
+				"numLayers"
+			],
+			[
+				"itr",
+				"itr_remove"
+			],
+			[
+				"new",
+				"newCapacity"
+			],
+			[
+				"cu",
+				"currentFPS"
+			],
+			[
+				"test",
+				"test2"
+			],
+			[
+				"it",
+				"itr_start"
+			],
+			[
+				"ti",
+				"ticks"
+			],
+			[
+				"WI",
+				"WINDOW_WIDTH"
+			],
+			[
+				"rot",
+				"rotSpeed"
+			],
+			[
+				"raw",
+				"raw_input_antenna1"
+			],
+			[
+				"raw_input_a",
+				"raw_input_antenna2"
+			],
+			[
+				"u",
+				"unit	unittest { … }"
+			],
+			[
+				"add",
+				"addValue"
+			],
+			[
+				"an",
+				"v_antenna1"
+			],
+			[
+				"gr",
+				"Gray"
+			],
+			[
+				"w",
+				"window"
+			],
+			[
+				"ant",
+				"antenna1"
+			],
+			[
+				"tile",
+				"tileValue"
+			],
+			[
+				"food",
+				"food_x"
+			],
+			[
+				"foo",
+				"food_y"
+			],
+			[
+				"fo",
+				"food_x"
+			],
+			[
+				"y_m",
+				"y_max"
+			],
+			[
+				"y_",
+				"y_min"
+			],
+			[
+				"win",
+				"WINDOW_WIDTH"
+			],
+			[
+				"WIN",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"TR",
+				"TURN_SPEED"
+			],
+			[
+				"itra",
+				"isIterating"
+			],
+			[
+				"My",
+				"myClass"
+			],
+			[
+				"iter",
+				"isIterating"
+			],
+			[
+				"v_",
+				"v_antenna1"
+			],
+			[
+				"ve",
+				"Vector2f"
+			],
+			[
+				"de",
+				"delta"
+			],
+			[
+				"fi",
+				"fish2"
+			],
+			[
+				"uni",
+				"uniform"
+			],
+			[
+				"ne",
+				"NeuralNet"
+			],
+			[
+				"SDL",
+				"SDL2"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"layer",
+				"layerSize"
+			],
+			[
+				"scr",
+				"scrollTop"
+			],
+			[
+				"ani",
+				"animSpeed"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"FONT",
+				"font-size"
+			],
+			[
+				"edi",
+				"editor"
+			],
+			[
+				"show",
+				"showingLandingPage"
+			],
+			[
+				"quote",
+				"quoteIndex"
+			],
+			[
+				"arr",
+				"arrayIndex"
+			],
+			[
+				"arra",
+				"array"
+			],
+			[
+				"cur",
+				"currentPage"
+			],
+			[
+				"home",
+				"homeopathy"
+			],
+			[
+				"ra",
+				"randomIndex"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"con",
+				"contact"
+			],
+			[
+				"ease",
+				"easeInOutQuart"
+			],
+			[
+				"page",
+				"pageElem"
+			],
+			[
+				"Fade",
+				"fadeOut"
+			],
+			[
+				"co",
+				"contact"
+			],
+			[
+				"load",
+				"loadPage"
+			],
+			[
+				"box",
+				"box_cover"
+			],
+			[
+				"sho",
+				"showingLandingPage"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"slide",
+				"slideDown"
+			],
+			[
+				"shw",
+				"showingLandingPage"
+			],
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"su",
+				"subtitle"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"maxLength"
+			],
+			[
+				"max",
+				"maxLength"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"fil",
+				"selectedFile"
+			],
+			[
+				"en",
+				"endIndex"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"ins",
+				"insertAtCursor"
+			],
+			[
+				"style",
+				"font-style"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"x_",
+				"x_max"
+			],
+			[
+				"Ke",
+				"keyPressed"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"cl",
+				"clampSpeedX"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"ke",
+				"keyPressed"
+			],
+			[
+				"fill",
+				"fill"
+			],
+			[
+				"bl",
+				"blockSize"
+			],
+			[
+				"b4",
+				"b4_to_dec"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/app.d",
+			"settings":
+			{
+				"buffer_size": 8617,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/fish.d",
+			"settings":
+			{
+				"buffer_size": 7104,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/neural_net2.d",
+			"settings":
+			{
+				"buffer_size": 5138,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/util.d",
+			"settings":
+			{
+				"buffer_size": 1868,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Quinn/Desktop/website2/style.css",
+		"/C/Users/Quinn/workspace/FishBowl/source/app.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/util.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/neural_net2.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/fish.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/neural_net.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/f",
+		"/C/Users/Quinn/workspace/FishBowl/source/fish.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/unittest.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/pile.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/util.d",
+		"/C/Users/Quinn/workspace/Fishbowl/source/pile_gc.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/pile_gc.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/neural_net.d",
+		"/C/Users/Quinn/workspace/FishBowl/source/test.d",
+		"/C/Users/Quinn/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Quinn/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Quinn/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Quinn/workspace/FishBowl/source/fishbowl.d",
+		"/C/Users/Quinn/workspace/FishBowl/hello.d",
+		"/C/Users/Quinn/Desktop/website2/index.html",
+		"/C/Users/Quinn/Desktop/website2/ver2/css/style.css",
+		"/C/Users/Quinn/Desktop/website2/ver2/index.html",
+		"/C/Users/Quinn/Desktop/language_ideas",
+		"/C/Users/Quinn/workspace/FishBowl/game.js",
+		"/C/Users/Quinn/workspace/FishBowl/neuralNet.js",
+		"/C/Users/Quinn/Desktop/website2/smoothScrolling.js",
+		"/C/Users/Quinn/Desktop/website2/social.css",
+		"/C/wamp/www/wp-content/themes/avalanche/footer.php",
+		"/C/Users/Quinn/Desktop/website/index.html",
+		"/C/Users/Quinn/Desktop/website/style.css",
+		"/C/Users/Quinn/Desktop/website/scripts.js",
+		"/C/Users/Quinn/Desktop/website/admin.html",
+		"/C/Users/Quinn/Desktop/website/index_old.html",
+		"/C/Users/Quinn/Desktop/website/index_ajax.html",
+		"/C/Users/Quinn/workspace/canvas/canvas.html",
+		"/C/Users/Quinn/workspace/canvas/engine.js",
+		"/C/Users/Quinn/Desktop/website/index_ajax;.html",
+		"/C/Users/Quinn/Desktop/website/style2.css",
+		"/C/Users/Quinn/Desktop/website/index2.html",
+		"/C/Users/Quinn/workspace/Platformer/platformer.html",
+		"/C/Users/Quinn/Desktop/website/upload.js",
+		"/C/Users/Quinn/workspace/Brain/server_fishbowl.py",
+		"/C/Users/Quinn/workspace/Brain/pynet.py",
+		"/C/Users/Quinn/workspace/Brain/Rule_Brain.py",
+		"/C/Users/Quinn/workspace/Brain/fishtank.py",
+		"/C/Users/Quinn/workspace/Platformer/engine.js",
+		"/C/Users/Quinn/Desktop/website/sytle.css",
+		"/C/Users/Quinn/Desktop/sytle.css",
+		"/C/Users/Quinn/Desktop/index.html",
+		"/C/Users/Quinn/workspace/Platformer/engine.java",
+		"/C/Users/Quinn/Desktop/test.py"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"reset",
+			"antenna",
+			"avg",
+			"average",
+			"HOEOSTASIS_RATIO",
+			"writeln",
+			"outputs",
+			"15",
+			"circle",
+			"memor",
+			"ticks",
+			"clic",
+			"bake",
+			"rad",
+			"radi",
+			" x ",
+			"x ",
+			"x",
+			"15",
+			"18",
+			"bake",
+			"alive",
+			"render",
+			"numSurviving",
+			"object",
+			"repop",
+			"simu",
+			"NUM_SURVIVING",
+			"itr",
+			"alive",
+			"itr",
+			"uniform",
+			"Enable",
+			"negLerp",
+			"lerp",
+			"fullness",
+			"ticks",
+			"repopulate",
+			"write",
+			"SURVIVING",
+			"uniform",
+			"genome",
+			"200",
+			"BODY_RADIUS",
+			"SIZE",
+			"RADI",
+			"BODY",
+			"health",
+			"selectedFish",
+			"brain",
+			"text",
+			"food",
+			"food.itr",
+			"food.it",
+			"size",
+			"sw",
+			"realFPS",
+			"averagefps",
+			"size",
+			"25",
+			"FOOD_SIZE",
+			"double",
+			"tile",
+			"foodSprite",
+			"position",
+			"setP",
+			"setT",
+			"mon\ntue\nthu",
+			"mon",
+			"\"asdf\", \"asdf\",\nasdf\nasdf\nasdf\nsadf\nasdf\n\n\"asdf\", \"asdf\",\nasdf\nasdf\nasdf\nsadf\nasdf\n\n\"asdf\", \"asdf\",\nasdf\nasdf2.68224\nasdf\nsadf\nasdf\n\n\"asdf\", \"asdf\",\nasdf\nasdf\nasdf\nsadf\nasdf\n",
+			"\n",
+			"asdf",
+			"sdsdfsdfsdfsdfsdfsdf",
+			"asdf",
+			"ctrl+d",
+			";\n",
+			"colu",
+			"          ",
+			"font-size",
+			"docume",
+			"png",
+			"logo",
+			"=\"",
+			"images",
+			"=\"",
+			"logo",
+			"=\"",
+			"social",
+			"PATH_TO",
+			"-1",
+			"ev Sa",
+			"&",
+			"(",
+			"<b>",
+			"sales or",
+			"’",
+			"30px",
+			"p ",
+			"p",
+			");\n",
+			"#",
+			"1",
+			";\n",
+			"bird",
+			"click",
+			"onclic",
+			"oncl",
+			"mdash",
+			"span",
+			"bloc",
+			"href",
+			"save",
+			"replace",
+			";\n",
+			"flower",
+			"replace",
+			"loadPage",
+			"e7e7",
+			"22px",
+			"pageElem",
+			"height",
+			"header_text",
+			"font-we",
+			"100",
+			"box-s",
+			"box",
+			"margin",
+			"margin-bottom"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"NUM_TO_REPRODUCE",
+			"NUM_SURVIVING",
+			"used_size",
+			"GRID_SIZE",
+			"float",
+			"tile",
+			"social",
+			"<a href=\"javascript:selectPage('page3')\">",
+			"javascript:selectPage(this);",
+			"selectPage(this)",
+			"ndash",
+			"div",
+			"white",
+			"easing",
+			"1px",
+			"easeInOutQuad",
+			"",
+			"easeInOutQuart",
+			"",
+			"easeInQuad",
+			"swing",
+			"easeOutElastic",
+			"'easeInOutQuart'",
+			"time, easeInOutQuart",
+			"</li>",
+			"<li>",
+			"70d0dd",
+			"729fcf",
+			"bccd66",
+			"c1d6a2",
+			"c7ad88",
+			"805736",
+			"806754",
+			"fcf4dd",
+			"b>",
+			"h3",
+			"doc",
+			"x",
+			"player.collisions",
+			"Fish.radius",
+			"simulate_fish",
+			"Simulation.render",
+			"or",
+			".vision_points ",
+			".vision_points",
+			"	",
+			"fish"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/app.d",
+					"settings":
+					{
+						"buffer_size": 8617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6978,
+								6978
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/D/D.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5098.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/fish.d",
+					"settings":
+					{
+						"buffer_size": 7104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5285,
+								5284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/D/D.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3171.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/neural_net2.d",
+					"settings":
+					{
+						"buffer_size": 5138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3895,
+								3895
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/D/D.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/util.d",
+					"settings":
+					{
+						"buffer_size": 1868,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1322,
+								1322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/D/D.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 257.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 146.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"asdf",
+				"\"asdf\", \"asdf\","
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
