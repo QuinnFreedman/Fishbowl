@@ -7,7 +7,7 @@ import Dgame.Graphic;
 import Dgame.Math;
 import Dgame.Window;
 
-import NeuralNetwork;
+import neural_net2;
 import main;
 import util;
 
@@ -15,26 +15,43 @@ private const RAD_TO_DEG = 57.2957795131;
 
 struct Fish {
 	public:
-		this(string genome, Window* window, int window_width, int window_height) {
-			this.genome = genome;
+		static const int BODY_RADIUS = 25;
+
+		this(float[][][]* genome, Window* window, const uint window_width, const uint window_height) {
 			this.window = window;
-			position = Vector2f(300, 250);
 			circle = new Shape(BODY_RADIUS, Vector2f(0, 0));
-			circle.setColor(Color4b(10,200,10));
+			//Color4b(10,200,10)
+			bodyColor = new Gradient(Color4b(184,150,72), Color4b(0,219,0));
 			antennaTip1 = new Shape(5, Vector2f(0, 0));
 			antennaTip1.setColor(Color4b.Gray);
 			antennaTip2 = new Shape(5, Vector2f(0, 0));
 			antennaTip2.setColor(Color4b.Gray);
-			window.draw(circle);
-			brain = NeuralNetwork.NeuralNet([2, 5, 4, 3]);
-			facing = uniform(0, 2 * PI);
-			alive = true;
-			health = 600;
+			//memory = new float[2];
+			reset(genome);
 		}
 
-		bool simulate() {
+		void reset(float[][][]* genome) {
+			position = Vector2f(
+					uniform(BODY_RADIUS, WINDOW_WIDTH - BODY_RADIUS),
+					uniform(BODY_RADIUS, WINDOW_HEIGHT - BODY_RADIUS));
+			brain = new Net([2, 3, 3, 2], genome);
+			facing = uniform(0, 2 * PI);
+			health = 600;
+			alive = true;
+			/*for(int i = 0; i < memory.length; i++) {
+				memory[i] = 0;
+			}*/
+		}
+
+		//returns true if fish died this tick
+		bool simulate(ulong t) {
+			if(!alive) {
+				return false;
+			}
+
 			health--;
-			if(health <= 0) {
+			if(health <= 0 && alive) {
+				alive = false;
 				return true;
 			}
 		//	get inputs
@@ -59,40 +76,60 @@ struct Fish {
 				raw_input_antenna2 = cast(float)main.scent[y2][x2] / 255.0;
 			}
 
+			float fullness = cast(float)health/MAX_HEALTH;
+
+			//float sinNoise = sin(t * 0.15);
+
 		//	calculate
-			int turnDir = 0;
-			if(raw_input_antenna1 > raw_input_antenna2) {
-				turnDir = 1;
-			} else if(raw_input_antenna1 < raw_input_antenna2) {
-				turnDir = -1;
-			}
+			/*float[] output = brain.evaluate([raw_input_antenna1,
+					raw_input_antenna2, fullness, memory[0], memory[1]]);*/
+			float[] output = brain.evaluate([raw_input_antenna1,
+					raw_input_antenna2/*, fullness*/]);
+			/*float[] output = brain.evaluate([raw_input_antenna1,
+					raw_input_antenna2, fullness, //sinNoise,
+					normalize(speed, -MAX_SPEED, MAX_SPEED),
+					normalize(rotSpeed, -MAX_ROT_SPEED, MAX_ROT_SPEED)]);*/
+			//writeln("rotSpeed == ",rotSpeed," MAX_ROT_SPEED = ",MAX_ROT_SPEED," normalize = ",normalize(rotSpeed, -MAX_ROT_SPEED, MAX_ROT_SPEED));
 		//	move
-			changeSpeed(0.1);
-			changeRotSpeed(0.04 * turnDir);
+			//memory[0] = output[2];
+			//memory[1] = output[3];
+			homeostasis();
+			changeSpeed(output[0] * 2 * MAX_ACCELERATION);
+			changeRotSpeed(output[1] * 2 * MAX_ROT_ACCELERATION);
 			transform();
 
 		//	check food
 			//TODO tighten up
 			if(scent[bound(cast(int)round(position.y/GRID_SIZE), 0, scent.length - 1)]
-					[bound(cast(int)round(position.x/GRID_SIZE), 0, scent[0].length - 1)] > 200) {
-				food.itr_start();
-				while (food.itr_hasNext()) {
-					Vector2f* a = food.itr_next();
+					[bound(cast(int)round(position.x/GRID_SIZE), 0, scent[0].length - 1)] > 130) {
+				
+				for(int i = 0; i < food.length; i++) {
+					Vector2f* a = &food[i];
+
 					if(sqrt((a.x - position.x) * (a.x - position.x) + 
 							(a.y - position.y) * (a.y - position.y)) < 
 							FOOD_RADIUS + BODY_RADIUS) {
 						health += 200;
-						a.x = uniform(0 + FOOD_RADIUS, WINDOW_WIDTH + FOOD_RADIUS);
-						a.y = uniform(0 + FOOD_RADIUS, WINDOW_HEIGHT + FOOD_RADIUS);
+						if(health > MAX_HEALTH){
+							health = MAX_HEALTH;
+						}
+
+						a.x = uniform(FOOD_RADIUS, WINDOW_WIDTH - FOOD_RADIUS);
+						a.y = uniform(FOOD_RADIUS, WINDOW_HEIGHT - FOOD_RADIUS);
 						updateScent = true;
 						break;
 					}
 				}
-				food.itr_done();
 			}
+			return false;
+		}
 
-		//	render
+		void render() {
+
+			float fullness = cast(float)health/MAX_HEALTH;
+
 			circle.setPosition(position);
+			circle.setColor(bodyColor.lerp(fullness));
 			tail = new Shape(Geometry.Lines, 
 					[Vertex(position), Vertex(v_tail)]);
 			tail.setColor(Color4b.Red);
@@ -111,11 +148,27 @@ struct Fish {
 			window.draw(tail);
 			window.draw(antenna1);
 			window.draw(antenna2);
-			return false;
 		}
 
+		void drawBrain(ref Window window, uint x, uint y) {
+			brain.visualize(window, x, y);
+		}
+
+		Net getBrain() {
+			return brain;
+		}
+
+		float getX() {
+			return position.x;
+		}
+		float getY() {
+			return position.y;
+		}
+
+	public:
+		bool alive;
 	private:
-		string genome;
+		//float[] memory;
 		Shape circle;
 		Shape tail;
 		Shape antenna1;
@@ -123,7 +176,7 @@ struct Fish {
 		Shape antennaTip1;
 		Shape antennaTip2;
 		Window* window;
-		NeuralNetwork.NeuralNet brain;
+		Net brain;
 		float facing;
 		float speed = 0;
 		float rotSpeed = 0;
@@ -131,17 +184,18 @@ struct Fish {
 		Vector2f v_tail = Vector2f(0,0);
 		Vector2f v_antenna1 = Vector2f(0,0);
 		Vector2f v_antenna2 = Vector2f(0,0);
-		bool alive;
 		//int food;
 		int health;
+		Gradient bodyColor;
+		const int MAX_HEALTH = 800;
+		const float MAX_SPEED = 2; //5;
+		const float MAX_ROT_SPEED = 0.04;
+		const float HOEOSTASIS_RATIO = 0.1;
+		const float MAX_ACCELERATION = MAX_SPEED / 2;
+		const float MAX_ROT_ACCELERATION = MAX_ROT_SPEED / 2;
 		const float ANTENNA_SPLAY_RAD = .7;
 		const int ANTENNA_LENGTH = 40;
-		const float MAX_SPEED = 1; //5;
-		const float MAX_ROT_SPEED = 0.04;
-		const float MAX_ACCELERATION = MAX_SPEED / 10;
-		const float MAX_ROT_ACCELERATION = MAX_ROT_SPEED / 10;
 		const float TWO_PI = 2 * PI;
-		const int BODY_RADIUS = 25;
 
 		@nogc
 		void changeSpeed(float delta) {
@@ -156,6 +210,24 @@ struct Fish {
 					-MAX_ROT_ACCELERATION, 
 					MAX_ROT_ACCELERATION);
 			rotSpeed = boundf(rotSpeed, -MAX_ROT_SPEED, MAX_ROT_SPEED);
+		}
+
+		@nogc
+		void homeostasis() {
+			speed *= 1 - HOEOSTASIS_RATIO;
+			rotSpeed *= 1 - HOEOSTASIS_RATIO;
+
+			/*if(speed < 0) {
+				speed += minf(-speed, HOEOSTASIS_RATIO * MAX_ACCELERATION);
+			} else {
+				speed -= minf(speed, HOEOSTASIS_RATIO * MAX_ACCELERATION);
+			}
+
+			if(rotSpeed < 0) {
+				rotSpeed += minf(-rotSpeed, HOEOSTASIS_RATIO * MAX_ROT_ACCELERATION);
+			} else {
+				rotSpeed -= minf(rotSpeed, HOEOSTASIS_RATIO * MAX_ROT_ACCELERATION);
+			}*/
 		}
 
 		@nogc

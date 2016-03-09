@@ -7,7 +7,7 @@ import core.exception;
 template pileTemplate(T) {
 	struct Pile {
 		private T[] data;
-		private int size;
+		private int used_size;
 		private int capacity;
 		private bool isIterating;
 
@@ -17,32 +17,48 @@ template pileTemplate(T) {
 			}	
 			data = new T[capacity];
 			this.capacity = capacity;
-			this.size = 0;
+			this.used_size = 0;
 			isIterating = false;
 		}
 
 		void add(T element) {
-			size++;
-			if(size >= capacity) {
-				ensureCapacity(size * 2);
+			used_size++;
+			if(used_size >= capacity) {
+				ensureCapacity(used_size * 2);
 			}
-			data[size - 1] = element;
+			data[used_size - 1] = element;
+		}
+
+		@nogc
+		int size() {
+			return this.used_size;
 		}
 
 		void clear() {
-			size = 0;
+			used_size = 0;
 			data = new T[capacity];
 		}
 
 		void ensureCapacity(int newCapacity) {
 			if(capacity < newCapacity) {
 				T[] newData = new T[newCapacity];
-				for(int i = 0; i < size; i++) {
+				for(int i = 0; i < used_size; i++) {
 					newData[i] = data[i];
 				}
 				data = newData;
 				capacity = newCapacity;
 			}
+		}
+
+		@nogc
+		bool contains(T e) {
+			for(int i = 0; i < used_size; i++) {
+				if(data[i] == e) {
+					return true;
+				}
+			}
+
+			return false;
 		}
 
 		/* iterator */
@@ -60,7 +76,7 @@ template pileTemplate(T) {
 			if(!isIterating) {
 				throw new Exception("Not iterating");
 			}
-			if(_itr_index >= size) {
+			if(_itr_index >= used_size) {
 				throw new Exception("Not iterating");
 			}
 			return data[_itr_index++];
@@ -70,7 +86,7 @@ template pileTemplate(T) {
 			if(!isIterating) {
 				throw new Exception("Not iterating");
 			}
-			return (_itr_index < size);
+			return (_itr_index < used_size);
 		}
 		
 		void itr_remove() {
@@ -78,8 +94,8 @@ template pileTemplate(T) {
 				throw new Exception("Not iterating");
 			}
 			_itr_index--;
-			data[_itr_index] = data[size - 1];
-			size--;
+			data[_itr_index] = data[used_size - 1];
+			used_size--;
 		}
 
 		void itr_done() {

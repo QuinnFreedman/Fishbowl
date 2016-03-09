@@ -38,17 +38,36 @@ void test() {
 
 	pileTemplate!(int).Pile* test2 = new pileTemplate!(int).Pile(2);
 	//one-hundred million
-	for(int i = 0; i < 100000000; i++) {
+	int NUMBER = 10000000;
+	for(int i = 0; i < NUMBER; i++) {
 		test2.add(i);
 	}
 
-	int i = 0;
+	int k = 0;
 	test2.itr_start();
 	while(test2.itr_hasNext()) {
-		//test2.itr_next();
-		assert(i++ == test2.itr_next());
+		if(test2.itr_next() % 2 == 0) {
+			test2.itr_remove();
+		}
+		k++;
 	}
 	test2.itr_done();
+
+	test2 = new pileTemplate!(int).Pile(2);
+	for(int i = 0; i < 100; i++) {
+		test2.add(i);
+	}
+	/*i = 0;
+	test2.itr_start();
+	while(test2.itr_hasNext()) {
+		assert(2 * i == test2.itr_next());
+		i++;
+	}
+	test2.itr_done();*/
+
+	for(int j = 1; j < 100; j+=2) {
+		assert(test2.contains(j));
+	}
 
 	writeln();
 	writeln("Tests finished");

@@ -12,6 +12,7 @@ template pileTemplate(T) {
 		private bool isIterating;
 
 		alias free = core.stdc.stdlib.free;
+		alias realloc = core.stdc.stdlib.realloc;
 		private static void* malloc(int used_size) {
 			auto p = core.stdc.stdlib.malloc(used_size);
 			if(!p) {
@@ -22,7 +23,7 @@ template pileTemplate(T) {
 
 		@nogc
 		this(int capacity) {
-			assert(capacity > 0, "Invalid capacity");
+			assert(capacity >= 0, "Invalid capacity");
 			data = cast(T*)malloc(capacity * T.sizeof);
 			this.capacity = capacity;
 			this.used_size = 0;
@@ -52,12 +53,7 @@ template pileTemplate(T) {
 		@nogc
 		void ensureCapacity(int newCapacity) {
 			if(capacity < newCapacity) {
-				T* newData = cast(T*)malloc(newCapacity * T.sizeof);
-				for(int i = 0; i < used_size; i++) {
-					newData[i] = data[i];
-				}
-				free(data);
-				data = newData;
+				data = cast(T*)realloc(data, newCapacity * T.sizeof);
 				capacity = newCapacity;
 			}
 		}

@@ -29,11 +29,12 @@ struct NeuralNet {
 		for(int i = 0; i < layers - 1; i++) {
 			this.biases[i] = new float[shape[i + 1]];
 			this.weights[i] = new float[][shape[i + 1]];
+			float sqrtd = 1/(sqrt(cast(float)shape[i]));
 			for(int j = 0; j < weights[i].length; j++) {
 				weights[i][j] = new float[shape[i]];
 				for(int k = 0; k < weights[i][j].length; k++) {
 					numWeights++;
-					weights[i][j][k] = 0;
+					weights[i][j][k] = uniform(-sqrtd, sqrtd);
 				}
 			}
 		}
@@ -56,10 +57,11 @@ struct NeuralNet {
 		for(int i = 0; i < inputs.length; i++) {
 			this.outputs[0][i] = inputs[i];
 		}
-		for(int l = 1; l < layers; l++) {
+		for(int l = 1; l < layers - 1; l++) {
 			for(int i = 0; i < shape[l]; i++) {
 				float functionInput = 0;
 				for(int j = 0; j < shape[l - 1]; j++) {
+					//writeln(weights[l]);
 					functionInput += weights[l][i][j] * outputs[l-1][j];
 				}
 				outputs[l][i] = sigmoid(functionInput);
