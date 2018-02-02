@@ -11,4 +11,4 @@ then genomes are combined in a way that mimics sexual reproduction (with crossov
 
 Over generations, the organisms develop strategies for efficiently seeking out food.
 
-![](images/screenshot.png)
+![](screenshot.png)
